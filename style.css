@@ -1,0 +1,336 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  user-select: none;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #000010, #000022);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Page container */
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page 1 - Cake box */
+
+.page1 {
+  background: linear-gradient(135deg, #000010, #000022);
+}
+
+.cake-box {
+  background: #111633;
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow:
+    0 0 15px rgba(72, 104, 245, 0.6),
+    inset 0 0 10px rgba(200, 200, 255, 0.3);
+  margin-bottom: 25px;
+  animation: popIn 1s ease forwards;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.happy-birthday {
+  font-size: 2.8rem;
+  color: #789cff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px #789cffaa;
+}
+
+.btn-next {
+  background-color: #4666f2;
+  color: white;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #4666f2bb;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-next:hover {
+  background-color: #3651bf;
+}
+
+/* Cake styling */
+
+.cake {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.layer {
+  height: 50px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+.layer.bottom {
+  background: #f4a261;
+  box-shadow: inset 0 -5px 8px #d98549;
+}
+
+.layer.middle {
+  background: #e76f51;
+  box-shadow: inset 0 -5px 8px #bd4530;
+}
+
+.layer.top {
+  background: #f4a261;
+  box-shadow: inset 0 -5px 8px #d98549;
+}
+
+.icing {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20px;
+  background: white;
+  border-radius: 12px 12px 0 0;
+  box-shadow: inset 0 2px 8px #f9f9f9;
+}
+
+.candle {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.candle-stick {
+  width: 12px;
+  height: 40px;
+  background: white;
+  border-radius: 6px;
+  margin: auto;
+  box-shadow:
+    0 0 5px #f4e1c1;
+}
+
+.flame {
+  width: 16px;
+  height: 16px;
+  background: orange;
+  border-radius: 50%;
+  margin: 5px auto 0 auto;
+  box-shadow:
+    0 0 12px orange;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.3);
+    opacity: 0.85;
+  }
+}
+
+/* Page 2 styling */
+
+.page2 {
+  color: #cce0ff;
+  padding-bottom: 60px;
+}
+
+.wishes-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px #789cffaa;
+}
+
+.photo-box {
+  width: 280px;
+  height: 360px;
+  margin: 0 auto 25px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 0 20px rgba(120, 156, 255, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 6px #7799ffcc);
+}
+
+/* Ensure responsive and readable message box */
+.message-box {
+  background: rgba(70, 102, 242, 0.15); /* subtle blueish transparent background */
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 0 20px rgba(70, 102, 242, 0.3);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #dbe6ff;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Title styling (optional tweak) */
+.message-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #aabbff;
+  text-shadow: 0 0 10px #789cffaa;
+}
+
+/* Navigation buttons - consistent size and spacing */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn-back, .btn-next {
+  background-color: #4666f2;
+  color: white;
+  padding: 12px 36px;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 14px #4666f2cc;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-back:hover, .btn-next:hover {
+  background-color: #3651bf;
+}
+
+/* Responsive: smaller font and padding on small screens */
+@media (max-width: 480px) {
+  .message-box {
+    font-size: 1.05rem;
+    padding: 20px;
+    max-width: 90%;
+  }
+  .message-title {
+    font-size: 1.8rem;
+  }
+  .btn-back, .btn-next {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Bottom wishes text */
+
+.bottom-wishes {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-style: italic;
+  color: #aabfee;
+}
+
+/* Navigation buttons common style */
+
+.nav-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn-back, .btn-next {
+  background-color: #4666f2;
+  color: white;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #4666f2bb;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover, .btn-next:hover {
+  background-color: #3651bf;
+}
+
+/* Page 3 styling */
+
+.page3 {
+  color: #cce0ff;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #3651bfbb;
+  line-height: 1.6;
+}
+
+.message-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 8px #789cffaa;
+}
+
+.message-box p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #dbe6ff;
+}
+
+/* Page 4 styling */
+
+.page4 {
+  color: #cce0ff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.thankyou-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px #789cffcc;
+}
+
+.thankyou-message {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: #dbe6ff;
+}
